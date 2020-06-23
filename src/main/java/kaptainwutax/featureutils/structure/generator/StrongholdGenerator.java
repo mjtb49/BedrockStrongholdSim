@@ -3,8 +3,9 @@ package kaptainwutax.featureutils.structure.generator;
 import kaptainwutax.featureutils.structure.Stronghold;
 import kaptainwutax.featureutils.structure.generator.piece.stronghold.*;
 import kaptainwutax.seedutils.lcg.rand.JRand;
+import kaptainwutax.seedutils.mc.ChunkRand;
 import kaptainwutax.seedutils.mc.MCVersion;
-import kaptainwutax.seedutils.mc.seed.ChunkSeeds;
+//import kaptainwutax.seedutils.mc.seed.ChunkSeeds;
 import kaptainwutax.seedutils.util.BlockBox;
 import kaptainwutax.seedutils.util.Direction;
 
@@ -60,11 +61,11 @@ public class StrongholdGenerator {
 		return this.version;
 	}
 
-	public boolean generate(long worldSeed, int chunkX, int chunkZ) {
+	public boolean generate(int worldSeed, int chunkX, int chunkZ) {
 		return this.generate(worldSeed, chunkX, chunkZ, piece -> true);
 	}
 
-	public boolean generate(long worldSeed, int chunkX, int chunkZ, Predicate<Stronghold.Piece> shouldContinue) {
+	public boolean generate(int worldSeed, int chunkX, int chunkZ, Predicate<Stronghold.Piece> shouldContinue) {
 		this.pieceList = new ArrayList<>();
 		this.currentPiece = null;
 		this.totalWeight = 0;
@@ -78,8 +79,11 @@ public class StrongholdGenerator {
 			this.pieceList.clear();
 			this.pieceWeights = new ArrayList<>(PIECE_WEIGHTS);
 
-			long layoutSeed = ChunkSeeds.getCarverSeed(worldSeed + (long) (attemptCount++), chunkX, chunkZ, MCVersion.v1_15);
-			JRand rand = new JRand(layoutSeed);
+
+			ChunkRand r = new ChunkRand();
+			r.setCarverSeed(worldSeed,chunkX,chunkZ,  MCVersion.v1_15);
+			//long layoutSeed = ChunkSeeds.getCarverSeed(worldSeed + (long) (attemptCount++), chunkX, chunkZ, MCVersion.v1_15);
+			JRand rand = r;
 			startPiece = new Start(rand, (chunkX << 4) + 2, (chunkZ << 4) + 2);
 			this.pieceList.add(startPiece);
 

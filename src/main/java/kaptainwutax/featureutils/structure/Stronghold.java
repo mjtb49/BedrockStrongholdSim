@@ -110,7 +110,7 @@ public class Stronghold extends Structure<Stronghold.Config, Stronghold.Data> {
 	@Override
 	public boolean canSpawn(int chunkX, int chunkZ, BiomeSource source) {
 		//TODO: Improve this (A LOT!)
-		for(CPos start: this.getAllStarts(source, new JRand(0L))) {
+		for(CPos start: this.getAllStarts(source, new JRand(0))) {
 			if(start.getX() == chunkX && start.getZ() == chunkZ)return true;
 		}
 
