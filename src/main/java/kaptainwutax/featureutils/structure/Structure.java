@@ -13,24 +13,7 @@ public abstract class Structure<C extends Feature.Config, D extends Feature.Data
 	public static Map<Class<? extends Structure>, String> CLASS_TO_NAME = new HashMap<>();
 
 	static {
-		CLASS_TO_NAME.put(BastionRemnant.class, "bastion_remnant");
-		CLASS_TO_NAME.put(BuriedTreasure.class, "buried_treasure");
-		CLASS_TO_NAME.put(DesertPyramid.class, "desert_pyramid");
-		CLASS_TO_NAME.put(EndCity.class, "end_city");
-		CLASS_TO_NAME.put(Fortress.class, "fortress");
-		CLASS_TO_NAME.put(Igloo.class, "igloo");
-		CLASS_TO_NAME.put(JunglePyramid.class, "jungle_pyramid");
-		CLASS_TO_NAME.put(Mansion.class, "mansion");
-		CLASS_TO_NAME.put(Mineshaft.class, "mineshaft");
-		CLASS_TO_NAME.put(Monument.class, "monument");
-		CLASS_TO_NAME.put(NetherFossil.class, "nether_fossil");
-		CLASS_TO_NAME.put(OceanRuin.class, "ocean_ruin");
-		CLASS_TO_NAME.put(PillagerOutpost.class, "pillager_outpost");
-		CLASS_TO_NAME.put(RuinedPortal.class, "ruined_portal");
-		CLASS_TO_NAME.put(Shipwreck.class, "shipwreck");
 		CLASS_TO_NAME.put(Stronghold.class, "stronghold");
-		CLASS_TO_NAME.put(SwampHut.class, "swamp_hut");
-		CLASS_TO_NAME.put(Village.class, "village");
 	}
 
 	public Structure(C config, MCVersion version) {

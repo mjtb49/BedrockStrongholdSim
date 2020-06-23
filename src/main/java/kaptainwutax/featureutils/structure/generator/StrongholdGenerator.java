@@ -22,8 +22,8 @@ public class StrongholdGenerator {
 			new PieceWeight<>(LeftTurn.class, 20, 0),
 			new PieceWeight<>(RightTurn.class, 20, 0),
 			new PieceWeight<>(SquareRoom.class, 10, 6),
-			new PieceWeight<>(SpiralStaircase.class, 5, 5),
 			new PieceWeight<>(Stairs.class, 5, 5),
+			new PieceWeight<>(SpiralStaircase.class, 5, 5),
 			new PieceWeight<>(FiveWayCrossing.class, 5, 4),
 			new PieceWeight<>(ChestCorridor.class, 5, 4),
 			new PieceWeight<Stronghold.Piece>(Library.class, 10, 2) {
