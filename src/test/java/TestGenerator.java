@@ -7,12 +7,6 @@ import kaptainwutax.seedutils.util.math.Vec3i;
 
 public class TestGenerator {
 
-    public static BlockBox getEndPortalBB(PortalRoom portalRoom) {
-        Vec3i mins = portalRoom.applyVecTransform(new Vec3i(3,3,8));
-        Vec3i maxes = portalRoom.applyVecTransform(new Vec3i(7,3,12));
-        return new BlockBox(mins,maxes);
-    }
-
     public static boolean intesectsChunk(int chunkX, int chunkZ, BlockBox box) {
         chunkX <<= 4;
         chunkZ <<= 4;
@@ -27,7 +21,7 @@ public class TestGenerator {
             if(piece instanceof PortalRoom) {
                 System.out.println((piece.getClass().toString()).split("\\.")[6] + " " + box.minX + " " + box.minZ+" to "+box.maxX+" "+box.maxZ+" facing " +
                         piece.getFacing());
-                BlockBox portal = getEndPortalBB((PortalRoom) piece);
+                BlockBox portal = ((PortalRoom) piece).getEndFrameBB();
                 System.out.println(portal.minX+" "+portal.minZ+" "+portal.maxX+" "+portal.maxZ);
             }
 
