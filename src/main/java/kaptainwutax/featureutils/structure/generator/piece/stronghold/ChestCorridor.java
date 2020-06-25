@@ -8,7 +8,7 @@ import kaptainwutax.seedutils.util.Direction;
 
 import java.util.List;
 
-public class ChestCorridor extends Stronghold.Piece {
+public class ChestCorridor extends Stronghold.Piece { //Called SHChestCorridor in bedrock
 
 	public ChestCorridor(int pieceId, JRand rand, BlockBox boundingBox, Direction facing) {
 		super(pieceId);

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Library extends Stronghold.Piece {
 
-	public Library(int pieceId, JRand rand, BlockBox boundingBox, Direction facing) {
+	public Library(int pieceId, JRand rand, BlockBox boundingBox, Direction facing) { //SHLibrary
 		super(pieceId);
 		this.setOrientation(facing);
 		rand.nextInt(5); //Random entrance.

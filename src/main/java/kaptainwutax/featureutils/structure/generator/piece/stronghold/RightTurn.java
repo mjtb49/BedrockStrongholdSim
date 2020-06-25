@@ -8,7 +8,7 @@ import kaptainwutax.seedutils.util.Direction;
 
 import java.util.List;
 
-public class RightTurn extends Stronghold.Piece {
+public class RightTurn extends Stronghold.Piece { //Called SHRightTurn in bedrock
 
 	public RightTurn(int pieceId, JRand rand, BlockBox boundingBox, Direction facing) {
 		super(pieceId);

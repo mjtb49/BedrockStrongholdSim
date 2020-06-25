@@ -15,7 +15,7 @@ public class FiveWayCrossing extends Stronghold.Piece {
 	private final boolean lowerRightExists;
 	private final boolean upperRightExists;
 
-	public FiveWayCrossing(int pieceId, JRand rand, BlockBox boundingBox, Direction facing) {
+	public FiveWayCrossing(int pieceId, JRand rand, BlockBox boundingBox, Direction facing) { //Called SHFiveWayCrossing in bedrock
 		super(pieceId);
 		this.setOrientation(facing);
 		rand.nextInt(5); //Random entrance.

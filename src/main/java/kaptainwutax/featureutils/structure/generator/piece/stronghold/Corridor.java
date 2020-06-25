@@ -8,7 +8,7 @@ import kaptainwutax.seedutils.util.Direction;
 
 import java.util.List;
 
-public class Corridor extends Stronghold.Piece {
+public class Corridor extends Stronghold.Piece { //Called SHStraight in bedrock
 
 	private final boolean leftExitExists;
 	private final boolean rightExitExists;

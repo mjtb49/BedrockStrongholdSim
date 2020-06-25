@@ -9,7 +9,7 @@ import kaptainwutax.seedutils.util.math.Vec3i;
 
 import java.util.List;
 
-public class PortalRoom extends Stronghold.Piece {
+public class PortalRoom extends Stronghold.Piece { //Called SHPortalRoom in mojmap
 
 	public PortalRoom(int pieceId, BlockBox boundingBox, Direction facing) {
 		super(pieceId);

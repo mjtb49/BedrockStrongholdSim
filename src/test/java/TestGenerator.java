@@ -24,9 +24,6 @@ public class TestGenerator {
                 BlockBox portal = ((PortalRoom) piece).getEndFrameBB();
                 System.out.println(portal.minX +" "+portal.minZ+" "+portal.maxX+" "+portal.maxZ);
             }
-
         }
-        JRand r = new JRand(2390);
-        System.out.println(r.getSeed());
     }
 }

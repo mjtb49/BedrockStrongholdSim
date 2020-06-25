@@ -10,7 +10,7 @@ import java.util.List;
 
 public class LeftTurn extends Stronghold.Piece {
 
-	public LeftTurn(int pieceId, JRand rand, BlockBox boundingBox, Direction facing) {
+	public LeftTurn(int pieceId, JRand rand, BlockBox boundingBox, Direction facing) { //SHLeftTurn
 		super(pieceId);
 		this.setOrientation(facing);
 		rand.nextInt(5); //Random entrance.

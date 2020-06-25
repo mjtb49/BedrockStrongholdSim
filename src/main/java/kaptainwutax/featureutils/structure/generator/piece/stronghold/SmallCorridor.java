@@ -13,7 +13,7 @@ public class SmallCorridor extends Stronghold.Piece {
 		super(pieceId);
 	}
 
-	public SmallCorridor(int pieceId, BlockBox boundingBox, Direction facing) {
+	public SmallCorridor(int pieceId, BlockBox boundingBox, Direction facing) { //SHFillerCorridor
 		super(pieceId);
 		this.setOrientation(facing);
 		this.boundingBox = boundingBox;

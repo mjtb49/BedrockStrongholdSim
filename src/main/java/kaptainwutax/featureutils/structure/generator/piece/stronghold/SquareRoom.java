@@ -8,7 +8,7 @@ import kaptainwutax.seedutils.util.Direction;
 
 import java.util.List;
 
-public class SquareRoom extends Stronghold.Piece {
+public class SquareRoom extends Stronghold.Piece { //Called SHRoomCrossing in mojmap
 
 	public SquareRoom(int pieceId, JRand rand, BlockBox boundingBox, Direction facing) {
 		super(pieceId);

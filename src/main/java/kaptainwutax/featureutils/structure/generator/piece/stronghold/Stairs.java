@@ -8,7 +8,7 @@ import kaptainwutax.seedutils.util.Direction;
 
 import java.util.List;
 
-public class Stairs extends Stronghold.Piece {
+public class Stairs extends Stronghold.Piece { //SHStraightStairsDown
 
 	public Stairs(int pieceId, JRand rand, BlockBox boundingBox, Direction facing) {
 		super(pieceId);

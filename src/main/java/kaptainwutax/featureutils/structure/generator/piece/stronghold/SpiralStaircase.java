@@ -8,7 +8,7 @@ import kaptainwutax.seedutils.util.Direction;
 
 import java.util.List;
 
-public class SpiralStaircase extends Stronghold.Piece {
+public class SpiralStaircase extends Stronghold.Piece { //SHStairsDown
 
 	private boolean isStructureStart;
 

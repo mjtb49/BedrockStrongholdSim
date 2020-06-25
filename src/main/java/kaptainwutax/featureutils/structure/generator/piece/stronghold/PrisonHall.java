@@ -8,7 +8,7 @@ import kaptainwutax.seedutils.util.Direction;
 
 import java.util.List;
 
-public class PrisonHall extends Stronghold.Piece {
+public class PrisonHall extends Stronghold.Piece { //Called SHPrisonHall in mojmap
 
 	public PrisonHall(int pieceId, JRand rand, BlockBox boundingBox, Direction facing) {
 		super(pieceId);
