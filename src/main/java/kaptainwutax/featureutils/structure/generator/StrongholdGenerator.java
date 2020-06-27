@@ -75,15 +75,15 @@ public class StrongholdGenerator {
 		Start startPiece;
 		int attemptCount = 0;
 
-	//	do {
+		do {
 			this.pieceList.clear();
 			this.pieceWeights = new ArrayList<>(PIECE_WEIGHTS);
 
-
-			ChunkRand r = new ChunkRand();
-			int layoutSeed = worldSeed^chunkX^chunkZ;//r.setCarverSeed(worldSeed,chunkX,chunkZ,  MCVersion.v1_8);
-			//long layoutSeed = ChunkSeeds.getCarverSeed(worldSeed + (long) (attemptCount++), chunkX, chunkZ, MCVersion.v1_15);
+			ChunkRand r = new ChunkRand(worldSeed);
+			int layoutSeed = ((r.nextInt()|1)*chunkX+(r.nextInt()|1)*chunkZ)^worldSeed;
 			JRand rand = new JRand(layoutSeed);
+
+			rand.nextInt();
 			startPiece = new Start(rand, (chunkX << 4) + 2, (chunkZ << 4) + 2);
 			this.pieceList.add(startPiece);
 
@@ -96,7 +96,7 @@ public class StrongholdGenerator {
 				piece.populatePieces(this, startPiece, this.pieceList, rand);
 				if(!shouldContinue.test(piece))return true;
 			}
-		//} while((this.pieceList.isEmpty() || startPiece.portalRoom == null) && !this.halted);
+		} while((this.pieceList.isEmpty() || startPiece.portalRoom == null) && !this.halted);
 
 		if(!this.halted) {
 			this.strongholdBox = BlockBox.empty();
