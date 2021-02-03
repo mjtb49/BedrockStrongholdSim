@@ -17,9 +17,14 @@ public class TestGenerator {
     }
 
     public static void main(String[] args) {
-        //{x=1724, y=19, z=-4769} for silverfish spawner
+        /*
+        5665922    - BlockPos{x=1724, y=19, z=-4769} 108 -295
+        149491915  - BlockPos{x=-4885, y=27, z=-900} -305, -57
+        296382583  - BlockPos{x=-2071, y=40, z=1582} -130, 95
+         */
         StrongholdGenerator generator = new StrongholdGenerator(MCVersion.v1_16);
-        generator.generate(5665922, 108, -295);
+        generator.generate(296382583, -130, 95);
+        //generator.generate(5665922, 108, -295);
         for (StructurePiece piece : generator.pieceList) {
             BlockBox box = piece.getBoundingBox();
             if (piece instanceof PortalRoom) {
