@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation ('com.github.mjtb49:SeedUtils:ed0f82e388be187baa0b844076ee841406d39925')
+    implementation ('com.github.mjtb49:SeedUtils:512bf3878057493457d534071277d58426a67b5a')
     implementation ('com.github.KaptainWutax:BiomeUtils:69d9a7644e5477344379e451cdbdd036596ca88c') {
         transitive = false
     }

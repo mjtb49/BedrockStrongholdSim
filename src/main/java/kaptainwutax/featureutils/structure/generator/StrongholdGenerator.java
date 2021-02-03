@@ -33,7 +33,7 @@ public class StrongholdGenerator {
 					return super.canSpawnMoreStructuresOfType(placedPieces) && placedPieces > 4;
 				}
 			},
-			new PieceWeight<Stronghold.Piece>(PortalRoom.class, 20, 1) {
+			new PieceWeight<Stronghold.Piece>(PortalRoom.class, 10, 1) {
 				@Override
 				public boolean canSpawnMoreStructuresOfType(int placedPieces) {
 					return super.canSpawnMoreStructuresOfType(placedPieces) && placedPieces > 5;
@@ -84,6 +84,7 @@ public class StrongholdGenerator {
 			JRand rand = new JRand(layoutSeed);
 
 			rand.nextInt();
+
 			startPiece = new Start(rand, (chunkX << 4) + 2, (chunkZ << 4) + 2);
 			this.pieceList.add(startPiece);
 
@@ -111,7 +112,9 @@ public class StrongholdGenerator {
 		if(pieceId > 50) {
 			return null;
 		} else if(Math.abs(x - startPiece.getBoundingBox().minX) <= 112 && Math.abs(z - startPiece.getBoundingBox().minZ) <= 112) {
-			Stronghold.Piece piece = this.getNextStructurePiece(startPiece, pieces, rand, x, y, z, facing, pieceId + 1);
+			JRand newRand = new JRand(rand);
+
+			Stronghold.Piece piece = this.getNextStructurePiece(startPiece, pieces, newRand, x, y, z, facing, pieceId + 1);
 			
 			if(piece != null) {
 				pieces.add(piece);

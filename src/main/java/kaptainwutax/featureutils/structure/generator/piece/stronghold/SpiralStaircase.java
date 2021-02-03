@@ -15,7 +15,25 @@ public class SpiralStaircase extends Stronghold.Piece { //SHStairsDown
 	public SpiralStaircase(int pieceType, JRand rand, int x, int z) {
 		super(pieceType);
 		this.isStructureStart = true;
-		this.setOrientation(Direction.randomHorizontal(rand));
+		Direction oldDir = Direction.randomHorizontal(rand);
+		Direction newDir = Direction.SOUTH;
+
+		switch (oldDir) {
+			case NORTH:
+				newDir = Direction.SOUTH;
+				break;
+			case SOUTH:
+				newDir = Direction.NORTH;
+				break;
+			case EAST:
+				newDir = Direction.WEST;
+				break;
+			case WEST:
+				newDir = Direction.EAST;
+				break;
+		}
+
+		this.setOrientation(newDir);
 		this.boundingBox = new BlockBox(x, 64, z, x + 5 - 1, 74, z + 5 - 1);
 	}
 
